@@ -5,6 +5,10 @@ export default Ember.Component.extend({
   actions: {
     toggleImageSize() {
       this.toggleProperty('isWide');
+    },
+
+    onDelete(rental) {
+      this.get('deleteRecord')(rental);
     }
   }
 });

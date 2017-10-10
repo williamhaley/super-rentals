@@ -12,6 +12,12 @@ export default Ember.Controller.extend({
           return { query: param, results: results };
         });
       }
+    },
+
+    deleteRecord(rental) {
+      Ember.Logger.log('deleteRecord: start');
+      this.get('store').unloadRecord(rental);
+      Ember.Logger.log('deleteRecord: finish');
     }
   }
 });
